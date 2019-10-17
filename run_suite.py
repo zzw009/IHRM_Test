@@ -14,7 +14,8 @@ suite.addTest(TestEmploye("test_get_emp"))
 suite.addTest(TestEmploye("test_delete_emp"))
 
 # 打开文件流
-file_to = "./report/report.html" + time.strftime("%Y-%m-%d %H-%M-%S") + ".html"
+file_to = "./report/report.html"
+# file_to = "./report/report.html" + time.strftime("%Y-%m-%d %H-%M-%S") + ".html"
 with open(file_to, "wb") as f:
     # 使用 HTMLTestRunner 要运行测试套件，将结果写入文件流
     runner = HTMLTestRunner(f, title="测试报告", description="v1.0")
